@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+  <div data-controller="hello">
+          <input data-target="hello.name" type="text">
+
+          <button data-action="click->hello#greet">
+            Greet
+          </button>
+
+          <span data-target="hello.output">
+          </span>
+    </div>
+    {{ content}}
+    <script src="{{ "/assets/js/bundle.js" | relative_url }}"></script>
+  </body>
+</html>
